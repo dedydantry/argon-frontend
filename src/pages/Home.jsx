@@ -42,11 +42,11 @@ export default function Home(){
 		const totalHour = endDate.diff(beginDate, 'm');
 		return totalHour / 60
 	};
-	
+
 
 	const postAttendance = async() => {
 		try {
-			if(attendance && (attendance.clock_in && attendance.clock_out)) return 
+			if(attendance && (attendance.clock_in && attendance.clock_out)) return
 			await api.post('/api/attendance')
 			return fetchAttendance()
 		} catch (error) {
@@ -66,12 +66,12 @@ export default function Home(){
 								color={!attendance || !attendance.clock_in ? 'bg-sky-600 hover:bg-sky-500' : 'bg-orange-600 hover:bg-orange-500'}
 								onClick={postAttendance}
 							>
-								<ArrowRightOnRectangleIcon 
+								<ArrowRightOnRectangleIcon
 									className="text-center h-14 w-14 mx-auto shrink-0 text-white font-bold group-hover:text-indigo-600"
 									aria-hidden="true"
 								/>
 							</ClockButton>
-							
+
 							<ul className="w-full flex flex-wrap mt-10 px-5 py-10">
 								<li className='w-1/3'>
 									<div className='flex justify-center'>
