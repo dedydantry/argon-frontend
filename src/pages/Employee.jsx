@@ -104,7 +104,7 @@ export default function Employee() {
                     </tr>
                   </thead>
                   <tbody className="bg-white">
-                    {employee.map((x,index) => (
+                    {employee.map((x) => (
                       <tr key={x.email} className="even:bg-gray-50">
                         <td className="whitespace-nowrap py-5 pl-4 pr-3 text-sm sm:pl-0">
                           <div className="flex items-center">
